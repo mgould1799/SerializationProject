@@ -128,10 +128,10 @@ public class Person implements Serializable {
         BufferedReader fileReader=null;
 
         try{
+            fileReader=new BufferedReader(new FileReader("person.csv"));
             String line="";
             //read CSV file header to skip it
             fileReader.readLine();
-            System.out.println("right before line reader file loop");
             while((line=fileReader.readLine())!=null){
                 //get all tokens available in a line
                 String[] token=line.split(",");
@@ -139,6 +139,7 @@ public class Person implements Serializable {
                     //create a new person object
                     //token 0 and 1 are the name and DOB
                     Person p= new Person(token[0],token[1]);
+                    System.out.println("Object deserializaed from CSV");
                     System.out.println("The person's name is "+p.name + ", and their DOB is " +p.DOB + ".");
                 }
 
