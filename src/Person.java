@@ -132,7 +132,7 @@ public class Person implements Serializable {
             //read CSV file header to skip it
             fileReader.readLine();
             System.out.println("right before line reader file loop");
-            //while((line=fileReader.readLine())!=null){
+            while((line=fileReader.readLine())!=null){
                 //get all tokens available in a line
                 String[] token=line.split(",");
                 if(token.length>0){
@@ -142,7 +142,7 @@ public class Person implements Serializable {
                     System.out.println("The person's name is "+p.name + ", and their DOB is " +p.DOB + ".");
                 }
 
-            //}
+            }
         }
         catch(Exception e){
             System.out.println("Error while reading csv");
@@ -152,7 +152,7 @@ public class Person implements Serializable {
                 fileReader.close();
             }
             catch(IOException e){
-                System.out.println("erro while closing file reader");
+                System.out.println("error while closing file reader");
             }
         }
 

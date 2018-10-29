@@ -10,7 +10,10 @@ public class PersonDriver {
         bloop.serializaton(bloop);
         bloop.deserialization();
 
+        System.out.println("before serialization");
         bloop.serializationCSV(bloop);
-       // bloop.deserializationCSV();
+        System.out.println("before deserialization");
+        bloop.deserializationCSV();
+        System.out.println("after deserialization");
     }
 }
