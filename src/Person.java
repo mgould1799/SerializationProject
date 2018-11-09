@@ -1,3 +1,5 @@
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
 import java.io.*;
 
 import java.io.FileWriter;
@@ -23,7 +25,7 @@ public class Person implements Serializable {
     /**
      * Default Contructor Creation
      */
-    private Person(){
+    public Person(){
     }
 
     /**
@@ -45,6 +47,9 @@ public class Person implements Serializable {
     public void setName(String name){
         this.name=name;
     }
+
+    public String getDOB(){ return DOB;}
+    public String getName(){ return name;}
 
 
     /**
@@ -93,7 +98,7 @@ public class Person implements Serializable {
         try{
 
             //creates the csv
-            fileWriter= new FileWriter("person.csv");
+            fileWriter= new FileWriter("person.csv",true);
             //creates a header
             fileWriter.append("Name,DOB");
             //creates a line seperator
@@ -102,7 +107,7 @@ public class Person implements Serializable {
             fileWriter.append(String.valueOf(p.name));
             fileWriter.append(",");
             fileWriter.append(String.valueOf(p.DOB));
-            fileWriter.append(",");
+            //fileWriter.append(",");
 
             System.out.println("CSV file created");
         }
@@ -160,6 +165,50 @@ public class Person implements Serializable {
 
     }
     //followed this tutioral https://examples.javacodegeeks.com/core-java/writeread-csv-files-in-java-example/
+
+    /**
+     * serialization with xml
+     * @param p
+     */
+    public static void xmlS(Person p) {
+        XMLEncoder encoder=null;
+        FileOutputStream fos=null;
+        try {
+            fos = new FileOutputStream("person.xml");
+            encoder = new XMLEncoder(fos);
+        }
+        catch(Exception e) {
+            System.out.println(e);
+        }
+        encoder.writeObject(p);
+         try {
+                encoder.close();
+                fos.close();
+            } catch (IOException e) {
+                System.out.println(e);
+            }
+            System.out.println("The object has been serialized in xml");
+
+    }
+
+    /**
+     * xml deserialization
+     */
+    public static Person xmlD(){
+        XMLDecoder decoder=null;
+        FileInputStream fis=null;
+        try{
+            //decoder=new XMLDecoder(new BufferedInputStream(new FileInputStream("person.xml")));
+            fis=new FileInputStream("person.xml");
+            decoder= new XMLDecoder(fis);
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+        Person p=(Person) decoder.readObject();
+        decoder.close();
+        return p;
+    }
 
 
 }

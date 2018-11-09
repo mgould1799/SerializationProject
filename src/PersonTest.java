@@ -4,10 +4,12 @@ import org.junit.Test;
 class PersonTest {
 
     static Person bloop=null;
+    static Person random=null;
 
     @Before
     public static void setUp() throws Exception{
         bloop= new Person("Meagan","081098");
+        random= new Person( "Bob","081098");
     }
 
     /**
@@ -36,6 +38,7 @@ class PersonTest {
     @Test
     public static void testSerializationCSV(){
         bloop.serializationCSV(bloop);
+        //random.serializationCSV(random);
     }
 
     /**
@@ -46,6 +49,23 @@ class PersonTest {
         bloop.deserializationCSV();
     }
 
+    /**
+     * test for xmlS
+     */
+    @Test
+    public static void testXmlS(){
+        bloop.xmlS(bloop);
+
+    }
+
+    /**
+     * test for xmlD
+     */
+    public static void testXmlD() {
+        System.out.println(bloop.xmlD());
+    }
+
+
     public static void main(String[] args) throws Exception{
         System.out.println("Doing JUnit Test");
         setUp();
@@ -53,6 +73,8 @@ class PersonTest {
         testDeserialization();
         testSerializationCSV();
         testDeserializationCSV();
+        testXmlS();
+        testXmlD();
 
 
     }
