@@ -57,7 +57,7 @@ public class Person implements Serializable {
     *this method is to serialize an object and store it in a file call personfile.ser
     *it takes an input of a person object and prints that the object has been serialized
      */
-    public static void serializaton(Person p){
+    public static void sBinary(Person p){
         try {
             FileOutputStream output = new FileOutputStream("personfile.ser");
             ObjectOutputStream out = new ObjectOutputStream(output);
@@ -76,24 +76,27 @@ public class Person implements Serializable {
     *this method is deserialize a person object from the file personfile.ser
     *the method prints weather is has been deserialized and prints out the persons name and DOB
     */
-    public static void deserialization() {
+    public static Person dBinary() {
+        Person personNew=null;
         try {
             ObjectInputStream in = new ObjectInputStream(new FileInputStream("personfile.ser"));
-            Person personNew = (Person) in.readObject();
-            System.out.println("The object has been deserialized");
-            System.out.println("The person's name is "+personNew.name + ", and their DOB is " +personNew.DOB + ".");
+            personNew = (Person) in.readObject();
+            //System.out.println("The object has been deserialized");
+            //System.out.println("The person's name is "+personNew.name + ", and their DOB is " +personNew.DOB + ".");
 
             in.close();
+            return personNew;
         }
         catch(Exception e){
             System.out.println("error");
         }
+        return personNew;
     }
 
     /**
      * serialization with a csv file
      */
-    public static void serializationCSV(Person p){
+    public static void sCSV(Person p){
         FileWriter fileWriter=null;
         try{
 
@@ -129,8 +132,9 @@ public class Person implements Serializable {
     /**
      * deseralization with a csv file
      */
-    public static void deserializationCSV(){
+    public static Person dCSV(){
         BufferedReader fileReader=null;
+        Person p=null;
 
         try{
             fileReader=new BufferedReader(new FileReader("person.csv"));
@@ -143,9 +147,10 @@ public class Person implements Serializable {
                 if(token.length>0){
                     //create a new person object
                     //token 0 and 1 are the name and DOB
-                    Person p= new Person(token[0],token[1]);
-                    System.out.println("Object deserializaed from CSV");
-                    System.out.println("The person's name is "+p.name + ", and their DOB is " +p.DOB + ".");
+                     p= new Person(token[0],token[1]);
+                    //System.out.println("Object deserializaed from CSV");
+                    //System.out.println("The person's name is "+p.name + ", and their DOB is " +p.DOB + ".");
+                    return p;
                 }
 
             }
@@ -161,16 +166,16 @@ public class Person implements Serializable {
                 System.out.println("error while closing file reader");
             }
         }
-
+        return p;
 
     }
     //followed this tutioral https://examples.javacodegeeks.com/core-java/writeread-csv-files-in-java-example/
 
     /**
      * serialization with xml
-     * @param p
+     * @param person
      */
-    public static void xmlS(Person p) {
+    public static void sXML(Person person) {
         XMLEncoder encoder=null;
         FileOutputStream fos=null;
         try {
@@ -180,7 +185,7 @@ public class Person implements Serializable {
         catch(Exception e) {
             System.out.println(e);
         }
-        encoder.writeObject(p);
+        encoder.writeObject(person);
          try {
                 encoder.close();
                 fos.close();
@@ -194,7 +199,7 @@ public class Person implements Serializable {
     /**
      * xml deserialization
      */
-    public static Person xmlD(){
+    public static Person dXML(){
         XMLDecoder decoder=null;
         FileInputStream fis=null;
         try{
@@ -205,10 +210,18 @@ public class Person implements Serializable {
         catch(Exception e){
             System.out.println(e);
         }
-        Person p=(Person) decoder.readObject();
+        Person decodedP=(Person) decoder.readObject();
         decoder.close();
-        return p;
+        return decodedP;
     }
+
+    //https://howtodoinjava.com/java/serialization/xmlencoder-and-xmldecoder-example/
+
+    public String toString(){
+        return "The person's name is "+name+", and their DOB is "+DOB+".";
+    }
+
+
 
 
 }
