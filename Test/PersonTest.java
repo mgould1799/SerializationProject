@@ -10,7 +10,7 @@ public class PersonTest {
 
         @Before
         public static void setUp() throws Exception{
-            bloop= new Person("Meagan","081098");
+            bloop= new Person("Meagan",5);
 
         }
 
@@ -20,7 +20,7 @@ public class PersonTest {
          */
         @Test
         public static void testSBinary(){
-            bloop.sBinary(bloop);
+            Person.serializationBinary(bloop,"personfile.ser");
 
         }
 
@@ -31,7 +31,7 @@ public class PersonTest {
         @Test
         public static void testDBinary(){
 
-            bloop.dBinary().toString();
+            Person.deserializationBinary("personfile.ser");
         }
 
         /**
@@ -40,8 +40,7 @@ public class PersonTest {
          */
         @Test
         public static void testSCSV(){
-            bloop.sCSV(bloop);
-            //random.serializationCSV(random);
+            Person.serializationCSV(bloop,"person.csv");
         }
 
         /**
@@ -50,7 +49,7 @@ public class PersonTest {
         @Test
         public static void testDCSV(){
 
-            bloop.dCSV().toString();
+            Person.deserializationCSV("person.csv");
         }
 
         /**
@@ -58,7 +57,7 @@ public class PersonTest {
          */
         @Test
         public static void testSXML(){
-            bloop.sXML(bloop);
+            Person.serializationXML(bloop,"person.xml");
 
         }
 
@@ -66,7 +65,7 @@ public class PersonTest {
          * test for xmlD
          */
         public static void testDXML() {
-            System.out.println(bloop.dXML().toString());
+            System.out.println(Person.deserializationXML("person.xml").prettyString());
         }
 
 
