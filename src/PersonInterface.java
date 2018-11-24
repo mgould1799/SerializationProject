@@ -60,4 +60,6 @@ public class PersonInterface {
 
     }
 
+    public void pressBinarySerialization
+
 }

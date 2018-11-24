@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/xstream-1.4.11.1/xstream-benchmark/src/java" />
+      <root url="file://$USER_HOME$/Downloads/xstream-1.4.11.1/xstream-benchmark/src/test" />
+      <root url="file://$USER_HOME$/Downloads/xstream-1.4.11.1/xstream-hibernate/src/java" />
+      <root url="file://$USER_HOME$/Downloads/xstream-1.4.11.1/xstream-hibernate/src/test" />
+      <root url="file://$USER_HOME$/Downloads/xstream-1.4.11.1/xstream-jmh/src/java" />
+      <root url="file://$USER_HOME$/Downloads/xstream-1.4.11.1/xstream/src/java" />
+      <root url="file://$USER_HOME$/Downloads/xstream-1.4.11.1/xstream/src/test" />
+    </SOURCES>
+  </library>
+</component>

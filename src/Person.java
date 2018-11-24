@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.xml.DomDriver;
+
 
 
 public class Person implements Serializable {
@@ -217,6 +220,11 @@ public class Person implements Serializable {
         Person decodedP=(Person) decoder.readObject();
         decoder.close();
         return decodedP;
+    }
+
+    public static serializationXStream(Person person, String file){
+
+        Xstream xstream= new Xstream();
     }
 
     //https://howtodoinjava.com/java/serialization/xmlencoder-and-xmldecoder-example/
