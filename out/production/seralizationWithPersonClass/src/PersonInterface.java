@@ -1,10 +1,15 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+
 
 import javafx.event.ActionEvent;
 
 public class PersonInterface {
+
+
+
 
     @FXML
     private TextField name;
@@ -31,12 +36,21 @@ public class PersonInterface {
     private Button xmlDeserialization;
 
     @FXML
-    void binaryDeserialization(ActionEvent event) {
+    private Label personLabel;
+
+    Person person=new Person(name.getText(),Long.parseLong(dateOfBirth.getText()));
+
+    @FXML
+    public void binaryDeserialization(ActionEvent event) {
+        Person person= Person.deserializationBinary("personFile.ser");
+        personLabel.setText("Binary:"+person.prettyString());
 
     }
 
+
     @FXML
-    void binarySerialization(ActionEvent event) {
+    private void binarySerialization(ActionEvent event) {
+        Person.serializationBinary(person,"personFile.ser");
 
     }
 

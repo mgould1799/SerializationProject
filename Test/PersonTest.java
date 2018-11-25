@@ -31,7 +31,8 @@ public class PersonTest {
         @Test
         public static void testDBinary(){
 
-            Person.deserializationBinary("personfile.ser");
+            System.out.println(Person.deserializationBinary("personfile.ser").prettyString());
+
         }
 
         /**
@@ -49,7 +50,7 @@ public class PersonTest {
         @Test
         public static void testDCSV(){
 
-            Person.deserializationCSV("person.csv");
+            System.out.println(Person.deserializationCSV("person.csv").prettyString());
         }
 
         /**
@@ -71,6 +72,7 @@ public class PersonTest {
 
         @Test
         public static void testSerializationXStream(){
+
             Person.serializationXStream(bloop,"xstream.xml");
         }
 

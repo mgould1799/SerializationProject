@@ -110,7 +110,7 @@ public class Person implements Serializable {
         try{
 
             //creates the csv
-            fileWriter= new FileWriter(fileName,true);
+            fileWriter= new FileWriter(fileName);
             //creates a header
             fileWriter.append("Name,DOB");
             //creates a line seperator
@@ -225,12 +225,10 @@ public class Person implements Serializable {
     public static void  serializationXStream(Person person, String file){
 
         FileOutputStream fos=null;
+        XStream xstream=new XStream(new DomDriver());
         try {
-            XStream xstream=new XStream();
-            String data=xstream.toXML(person);
-            byte[] bytes=data.getBytes("UTF-8");
             fos=new FileOutputStream(file);
-            fos.write(bytes);
+            xstream.toXML(person,fos);
         }
         catch(Exception e){
             System.out.println(e);
@@ -251,10 +249,11 @@ public class Person implements Serializable {
 
     //https://howtodoinjava.com/java/serialization/xmlencoder-and-xmldecoder-example/
     public static Person deserializationXStream(String file){
-        XStream xstream= new XStream();
-        Person person=null;
+        XStream xstream= new XStream(new DomDriver());
+        Person person=new Person();
         try{
-            person= (Person) xstream.fromXML(file);
+            FileInputStream fis= new FileInputStream(file);
+            xstream.fromXML(fis,person);
         }
         catch(Exception e){
             System.out.println(e);
