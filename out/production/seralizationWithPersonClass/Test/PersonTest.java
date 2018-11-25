@@ -1,3 +1,4 @@
+import com.personapp.model.Person;
 import org.junit.Before;
 import org.junit.Test;
 
