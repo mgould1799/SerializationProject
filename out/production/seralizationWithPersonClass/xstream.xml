@@ -1,4 +1,4 @@
-<Person>
-  <name>Meagan</name>
-  <DOB>5</DOB>
-</Person>
+<com.personapp.model.Person>
+  <name>frank</name>
+  <DOB>77777777</DOB>
+</com.personapp.model.Person>

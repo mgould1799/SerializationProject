@@ -21,27 +21,9 @@ public class PersonInterface {
     private TextField dateOfBirth;
 
     @FXML
-    private Button binarySerialization;
-
-    @FXML
-    private Button csvSerialization;
-
-    @FXML
-    private Button xmlSerialization;
-
-    @FXML
-    private Button binaryDeserialization;
-
-    @FXML
-    private Button csvDeserialzation;
-
-    @FXML
-    private Button xmlDeserialization;
-
-    @FXML
     private Label personLabel;
 
-    Person person=new Person(name.getText(),Long.parseLong(dateOfBirth.getText()));
+    //Person person=new Person(name.getText(),Long.parseLong(dateOfBirth.getText()));
 
     @FXML
     public void binaryDeserialization(ActionEvent event) {
@@ -53,68 +35,49 @@ public class PersonInterface {
 
     @FXML
     private void binarySerialization(ActionEvent event) {
+        Person person=new Person(name.getText(),Long.parseLong(dateOfBirth.getText()));
         Person.serializationBinary(person,"personFile.ser");
 
-    }
-
-    @FXML
-    void csvDeserialization(ActionEvent event) {
-
-    }
-
-    @FXML
-    void csvSerialization(ActionEvent event) {
-
-    }
-
-    @FXML
-    void xmlDeserialization(ActionEvent event) {
-
-    }
-
-    @FXML
-    void xmlSerialization(ActionEvent event) {
-
-    }
-
-    /*
-        @FXML
-    void binaryDeserialization(ActionEvent event) {
-        Person person= Person.deserializationBinary("personFile.ser");
-        personLabel.setText("Binary:"+person.prettyString());
-
-    }
-
-    @FXML
-    void binarySerialization(ActionEvent event) {
-        Person.serializationBinary(person,"personFile.ser");
     }
 
     @FXML
     void csvDeserialization(ActionEvent event) {
         Person person= Person.deserializationCSV("person.csv");
         personLabel.setText("CSV: "+person.prettyString());
-
     }
 
     @FXML
     void csvSerialization(ActionEvent event) {
+        Person person=new Person(name.getText(),Long.parseLong(dateOfBirth.getText()));
         Person.serializationCSV(person,"person.csv");
-
     }
 
     @FXML
     void xmlDeserialization(ActionEvent event) {
-        Person.serializationXML(person,"person.xml");
-
+        Person person= Person.deserializationXML("person.xml");
+        personLabel.setText("XML: "+person.prettyString());
     }
 
     @FXML
     void xmlSerialization(ActionEvent event) {
-        Person person= Person.deserializationXML("person.xml");
-        personLabel.setText("XML: "+person.prettyString());
+        Person person=new Person(name.getText(),Long.parseLong(dateOfBirth.getText()));
+        Person.serializationXML(person,"person.xml");
+    }
+
+    @FXML
+    void xstreamDeserialization(ActionEvent event){
+        Person person= Person.deserializationXStream("xstream.xml");
+        personLabel.setText("XStream: "+person.prettyString());
 
     }
-     */
+
+    @FXML
+    void xstreamSerialization(ActionEvent event){
+        Person person=new Person(name.getText(),Long.parseLong(dateOfBirth.getText()));
+        Person.serializationXStream(person,"xstream.xml");
+
+    }
+
+
 
 }

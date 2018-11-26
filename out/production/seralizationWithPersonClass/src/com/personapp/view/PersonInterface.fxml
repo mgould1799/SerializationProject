@@ -18,6 +18,8 @@
       <Button fx:id="binaryDeserialization" layoutX="311.0" layoutY="218.0" mnemonicParsing="false" onAction="#binaryDeserialization" prefHeight="27.0" prefWidth="167.0" text="Binary Deserialization" />
       <Button fx:id="csvDeserialzation" layoutX="311.0" layoutY="255.0" mnemonicParsing="false" onAction="#csvDeserialization" prefHeight="27.0" prefWidth="167.0" text="CSV Deserialization" />
       <Button layoutX="311.0" layoutY="292.0" mnemonicParsing="false" onAction="#xmlDeserialization" prefHeight="27.0" prefWidth="167.0" text="XML Deserialization" fx:id="xmlDeserialization" />
-      <Label fx:id="personLabel" layoutX="220.0" layoutY="172.0" text="No person information yet" />
+      <Label fx:id="personLabel" layoutX="93.0" layoutY="174.0" prefHeight="17.0" prefWidth="410.0" text="." />
+      <Button layoutX="113.0" layoutY="327.0" mnemonicParsing="false" onAction="#xstreamSerialization" prefHeight="27.0" prefWidth="167.0" text="XStream Serialization" />
+      <Button layoutX="310.0" layoutY="327.0" mnemonicParsing="false" onAction="#xstreamDeserialization" prefHeight="27.0" prefWidth="167.0" text="XStream Deserialization" />
    </children>
 </AnchorPane>
