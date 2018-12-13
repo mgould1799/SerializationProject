@@ -10,11 +10,17 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.converters.Converter;
+import com.thoughtworks.xstream.converters.MarshallingContext;
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+import com.thoughtworks.xstream.io.HierarchicalStreamDriver;
+import com.thoughtworks.xstream.io.HierarchicalStreamReader;
+import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 
 
-public class Person implements Serializable {
+public class Person implements Serializable, Converter {
 
     /**
      * attributes
@@ -26,6 +32,8 @@ public class Person implements Serializable {
      * Default Contructor Creation
      */
     public Person(){
+        name="";
+        DOB=0;
     }
 
     /**
@@ -241,6 +249,37 @@ public class Person implements Serializable {
             }
 
         }
+
+    }
+
+    public void marshal(Object value, HierarchicalStreamWriter writer, MarshallingContext context){
+        Person person = (Person) value;
+        writer.startNode("name");
+        writer.setValue(person.getName());
+        writer.endNode();
+
+        writer.startNode("DOB");
+        writer.setValue(person.getDOB());
+        writer.endNode();
+
+
+    }
+
+    public Person unmarshal(HierarchicalStreamReader reader, UnmarshallingContext context){
+        Person person = new Person();
+
+        reader.moveDown();
+        person.setName(reader.getValue());
+        reader.moveUp();
+
+        reader.moveDown();
+        person.setDOB(Long.parseLong( reader.getValue()));
+        reader.moveUp();
+
+        reader.moveDown();
+
+        return person;
+
 
     }
 
