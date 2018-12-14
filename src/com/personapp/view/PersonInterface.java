@@ -65,6 +65,7 @@ public class PersonInterface {
     }
 
     @FXML
+
     void xstreamDeserialization(ActionEvent event){
         Person person= Person.deserializationXStream("xstream.xml");
         personLabel.setText("XStream: "+person.prettyString());

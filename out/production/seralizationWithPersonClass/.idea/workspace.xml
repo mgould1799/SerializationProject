@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="68cb491f-d19a-42f8-8049-dfd77411f01e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test/PersonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/seralizationWithPersonClass/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/seralizationWithPersonClass/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/seralizationWithPersonClass/Test/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/seralizationWithPersonClass/Test/PersonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/seralizationWithPersonClass/personfile.ser" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/seralizationWithPersonClass/personfile.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/seralizationWithPersonClass/src/com/personapp/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/seralizationWithPersonClass/src/com/personapp/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/seralizationWithPersonClass/xstream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/seralizationWithPersonClass/xstream.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personfile.ser" beforeDir="false" afterPath="$PROJECT_DIR$/personfile.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/personapp/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/personapp/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xstream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xstream.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/personapp/model/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1786">
-              <caret line="109" column="47" selection-start-line="109" selection-start-column="47" selection-end-line="109" selection-end-column="47" />
+            <state relative-caret-position="348">
+              <caret line="313" column="19" selection-start-line="313" selection-start-column="19" selection-end-line="313" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/personapp/view/PersonInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
+            <state relative-caret-position="915">
               <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -82,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/PersonTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="53" column="86" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
+            <state relative-caret-position="1260">
+              <caret line="88" column="14" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,15 +127,17 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/person.csv" />
         <option value="$PROJECT_DIR$/src/Person.java" />
-        <option value="$PROJECT_DIR$/Test/PersonTest.java" />
         <option value="$PROJECT_DIR$/src/PersonInterface.java" />
         <option value="$PROJECT_DIR$/src/com/personapp/view/PersonInterface.java" />
+        <option value="$PROJECT_DIR$/Test/PersonTest.java" />
+        <option value="$PROJECT_DIR$/src/com/personapp/model/Person.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="720" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="720" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectView">
@@ -134,6 +145,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,7 +188,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -321,16 +332,21 @@
       <workItem from="1543191192831" duration="852000" />
       <workItem from="1543327391424" duration="1583000" />
       <workItem from="1544238646592" duration="303000" />
+      <workItem from="1544318657770" duration="528000" />
+      <workItem from="1544660941856" duration="1584000" />
+      <workItem from="1544812685209" duration="1526000" />
+      <workItem from="1544816218758" duration="3152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32286000" />
+    <option name="totallyTimeSpent" value="39076000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="720" y="23" width="720" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20314735" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.095870204" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -339,16 +355,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7353362" weight="0.26751593" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.73390555" weight="0.26751593" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49928468" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.26466382" side_tool="true" visible="true" weight="0.26751593" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.26609442" side_tool="true" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.46494994" weight="0.3299363" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.46065807" weight="0.3299363" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -391,13 +407,23 @@
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/personapp/model/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="313" column="19" selection-start-line="313" selection-start-column="19" selection-end-line="313" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/personapp/view/PersonInterface.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/xstream.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -411,6 +437,16 @@
     <entry file="file://$PROJECT_DIR$/person.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/personapp/view/PersonInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -423,28 +459,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/PersonTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="53" column="86" selection-start-line="53" selection-start-column="86" selection-end-line="53" selection-end-column="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/personapp/view/PersonInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/personapp/model/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1786">
-          <caret line="109" column="47" selection-start-line="109" selection-start-column="47" selection-end-line="109" selection-end-column="47" />
+        <state relative-caret-position="1260">
+          <caret line="88" column="14" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

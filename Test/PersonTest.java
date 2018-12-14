@@ -84,6 +84,12 @@ public class PersonTest {
 
         }
 
+        @Test
+        public static void testMarshal(){
+            //https://www.tutorialspoint.com/xstream/xstream_custom_converter.htm
+
+        }
+
 
         public static void main(String[] args) throws Exception{
             System.out.println("Doing JUnit Test");
